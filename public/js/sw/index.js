@@ -1,3 +1,8 @@
 self.addEventListener('fetch', function(event) {
-  console.log(event.request);
+  event.respondWith(
+    new Response('<div class="a-winner-is-me">hi there</div>', {
+      headers: {
+        'content-type': 'text/html'
+    }})
+  );
 });
